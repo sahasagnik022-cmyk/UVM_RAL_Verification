@@ -1,0 +1,536 @@
+$date
+	Mon Nov  2 01:05:15 2026
+$end
+
+$version
+	Synopsys VCS version Q-2020.03-SP2-8_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 88880856c90888d2 $end
+
+
+$scope module tb $end
+$var reg 1 ! pclk $end
+$var reg 1 " presetn $end
+
+$scope begin unnamed$$_vcs_3 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_0 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_1 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_2 $end
+$upscope $end
+
+
+$scope module vif $end
+$var reg 1 # pclk $end
+$var reg 1 $ presetn $end
+$var reg 1 % psel $end
+$var reg 1 & penable $end
+$var reg 1 ' pwrite $end
+$var reg 16 ( paddr [15:0] $end
+$var reg 32 ) pwdata [31:0] $end
+$var reg 32 * prdata [31:0] $end
+$var reg 1 + pslverr $end
+$var reg 1 , pready $end
+$var reg 1 - irq $end
+$upscope $end
+
+
+$scope module dut $end
+$var reg 1 . pclk $end
+$var reg 1 / presetn $end
+$var reg 1 0 psel $end
+$var reg 1 1 penable $end
+$var reg 1 2 pwrite $end
+$var reg 16 3 paddr [15:0] $end
+$var reg 32 4 pwdata [31:0] $end
+$var reg 32 5 prdata [31:0] $end
+$var reg 1 6 pready $end
+$var reg 1 7 pslverr $end
+$var reg 1 8 irq $end
+$var reg 1 9 acc $end
+$var reg 1 : wr $end
+$var reg 1 ; rd $end
+$var reg 1 < unaligned $end
+$var reg 1 = unmapped $end
+$var reg 16 > word_addr [15:0] $end
+$var reg 1 ? wr_ok $end
+$var reg 1 @ rd_ok $end
+$var reg 1 A locked $end
+$var reg 32 B switch_ctrl_q [31:0] $end
+$var reg 4 C port_enable_q [3:0] $end
+$var reg 4 D fwd_enable_q [3:0] $end
+$var reg 32 E gen_ctrl_q [31:0] $end
+$var reg 32 F gen_pkt_cfg_q [31:0] $end
+$var reg 16 G gen_interval_q [15:0] $end
+$var reg 16 H gen_count_q [15:0] $end
+$var reg 8 I irq_status_q [7:0] $end
+$var reg 8 J irq_enable_q [7:0] $end
+$var reg 8 K err_status_q [7:0] $end
+$var reg 8 L err_enable_q [7:0] $end
+$var reg 16 M err_count_q [15:0] $end
+$var reg 32 N err_info_q [31:0] $end
+$var reg 1 O wr_switch_ctrl $end
+$var reg 1 P wr_port_en $end
+$var reg 1 Q wr_fwd_en $end
+$var reg 1 R wr_gen_ctrl $end
+$var reg 1 S wr_gen_pkt $end
+$var reg 1 T wr_gen_int $end
+$var reg 1 U wr_gen_cnt $end
+$var reg 1 V wr_irq_status $end
+$var reg 1 W wr_irq_enable $end
+$var reg 1 X wr_irq_force $end
+$var reg 1 Y wr_err_status $end
+$var reg 1 Z wr_err_enable $end
+$var reg 1 [ wr_err_inject $end
+$var reg 1 \ wr_lock $end
+$var reg 1 ] wr_soft_reset $end
+$var reg 1 ^ cfg_wr_ok $end
+$var reg 1 _ srst_pulse $end
+$var reg 1 ` stat_clr_pulse $end
+$var reg 1 a start_pulse $end
+$var reg 1 b stop_pulse $end
+$var reg 8 c irq_force_w [7:0] $end
+$var reg 8 d err_inject_w [7:0] $end
+$var reg 1 e err_clr_count $end
+$var reg 1 f switch_en $end
+$var reg 1 g irq_gen_en $end
+$var reg 1 h gen_en $end
+$var reg 1 i gen_cont $end
+$var reg 1 j gen_valid $end
+$var reg 1 k gen_sop $end
+$var reg 1 l gen_eop $end
+$var reg 1 m gen_ready $end
+$var reg 2 n gen_dst [1:0] $end
+$var reg 2 o gen_src [1:0] $end
+$var reg 2 p gen_fsm [1:0] $end
+$var reg 8 q gen_len [7:0] $end
+$var reg 32 r gen_data [31:0] $end
+$var reg 1 s gen_running $end
+$var reg 1 t gen_done_pulse $end
+$var reg 1 u gen_start_ack $end
+$var reg 16 v gen_left [15:0] $end
+$var reg 1 w gen_en_eff $end
+$var reg 16 x stat_rx [15:0] $end
+$var reg 16 y stat_tx [15:0] $end
+$var reg 16 z stat_drop [15:0] $end
+$var reg 1 { ovf_evt $end
+$var reg 1 | dest_err_evt $end
+$var reg 1 } drop_evt $end
+$var reg 1 ~ fwd_eop_evt $end
+$var reg 1 "! busy $end
+$var reg 32 "" switch_status_r [31:0] $end
+$var reg 32 "# port_status_r [31:0] $end
+$var reg 32 "$ gen_status_r [31:0] $end
+$var reg 8 "% irq_w1c [7:0] $end
+$var reg 8 "& err_w1c [7:0] $end
+$var reg 8 "' err_set [7:0] $end
+$var reg 8 "( irq_set [7:0] $end
+$var reg 8 ") err_next [7:0] $end
+$var reg 1 "* err_promote $end
+$var reg 8 "+ irq_next [7:0] $end
+$var reg 32 ", inj_i [31:0] $end
+$var reg 32 "- code_i [31:0] $end
+$var reg 16 ". inject_pop [15:0] $end
+$var reg 8 "/ last_code [7:0] $end
+$var reg 32 "0 rdata_mux [31:0] $end
+
+$scope module u_gen $end
+$var reg 1 "1 clk $end
+$var reg 1 "2 rst_n $end
+$var reg 1 "3 enable $end
+$var reg 1 "4 start_pulse $end
+$var reg 1 "5 stop_pulse $end
+$var reg 1 "6 continuous $end
+$var reg 2 "7 cfg_dst [1:0] $end
+$var reg 2 "8 cfg_src [1:0] $end
+$var reg 8 "9 cfg_len [7:0] $end
+$var reg 8 ": cfg_seed [7:0] $end
+$var reg 16 "; cfg_interval [15:0] $end
+$var reg 16 "< cfg_count [15:0] $end
+$var reg 1 "= out_ready $end
+$var reg 1 "> out_valid $end
+$var reg 1 "? out_sop $end
+$var reg 1 "@ out_eop $end
+$var reg 2 "A out_dst [1:0] $end
+$var reg 2 "B out_src [1:0] $end
+$var reg 8 "C out_len [7:0] $end
+$var reg 32 "D out_data [31:0] $end
+$var reg 1 "E running $end
+$var reg 16 "F remaining [15:0] $end
+$var reg 2 "G fsm [1:0] $end
+$var reg 1 "H done_pulse $end
+$var reg 1 "I start_ack $end
+$var reg 2 "J fsm_q [1:0] $end
+$var reg 8 "K beat_q [7:0] $end
+$var reg 16 "L gap_q [15:0] $end
+$var reg 16 "M left_q [15:0] $end
+$var reg 16 "N pkt_idx_q [15:0] $end
+$var reg 8 "O len_n [7:0] $end
+$var reg 16 "P n_pkts [15:0] $end
+$var reg 1 "Q last_beat $end
+$var reg 1 "R fire_start $end
+$upscope $end
+
+
+$scope module u_sw $end
+$var reg 1 "S clk $end
+$var reg 1 "T rst_n $end
+$var reg 1 "U switch_en $end
+$var reg 4 "V port_en [3:0] $end
+$var reg 4 "W fwd_en [3:0] $end
+$var reg 1 "X stat_clr $end
+$var reg 1 "Y in_valid $end
+$var reg 1 "Z in_sop $end
+$var reg 1 "[ in_eop $end
+$var reg 2 "\ in_dst [1:0] $end
+$var reg 2 "] in_src [1:0] $end
+$var reg 8 "^ in_len [7:0] $end
+$var reg 32 "_ in_data [31:0] $end
+$var reg 1 "` in_ready $end
+$var reg 16 "a stat_rx [15:0] $end
+$var reg 16 "b stat_tx [15:0] $end
+$var reg 16 "c stat_drop [15:0] $end
+$var reg 1 "d ovf_evt $end
+$var reg 1 "e dest_err_evt $end
+$var reg 1 "f drop_evt $end
+$var reg 1 "g fwd_eop_evt $end
+$var reg 1 "h dropping_q $end
+$var reg 16 "i rx_q [15:0] $end
+$var reg 16 "j tx_q [15:0] $end
+$var reg 16 "k drop_q [15:0] $end
+$var reg 1 "l dest_ok $end
+$var reg 1 "m queue_ok $end
+$var reg 1 "n accept $end
+$var reg 2 "o d [1:0] $end
+$var integer 32 "p i $end
+$var reg 1 "q _unused_src $end
+$var reg 8 "r _unused_len [7:0] $end
+$var reg 32 "s _unused_data [31:0] $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+0"
+b00000000000000000000000000000000 *
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+bxxxxxxxxxxxxxxxx (
+x9
+0"!
+0^
+0"6
+0|
+0"H
+0}
+0"3
+0e
+0"*
+0"R
+0~
+0i
+0t
+0h
+0w
+0s
+0u
+0g
+0"Q
+1A
+1"=
+0{
+x;
+x@
+0"2
+0"E
+0_
+0"I
+0a
+0`
+0b
+0"4
+0"5
+x<
+x=
+x:
+0Z
+0[
+0Y
+0Q
+0U
+0R
+0T
+0S
+0W
+0X
+0V
+0\
+x?
+0P
+0]
+0O
+b00000000 "K
+b0000000000000100 "<
+b0000000000000010 ";
+b0000000000000000 M
+b00000000 L
+b00000000000000000000000000000000 N
+b00000000 d
+b00000000 ")
+b00000000 "'
+b00000000 K
+b00000000 "&
+b00 "G
+b00 "J
+b1111 D
+b0000000000000000 "L
+b0000000000000100 H
+b00000000000000000000000000000000 E
+b00000000000000000000000010100101 r
+b00 p
+b0000000000000010 G
+b0000000000000000 v
+b00000100 q
+b00000000000000000000010000000001 F
+b00000000000000000000000000000000 "$
+b0000000000000000 ".
+b00000000 J
+b00000000 c
+b00000000 "+
+b00000000 "(
+b00000000 I
+b00000000 "%
+b11111111 "/
+b0000000000000000 "M
+b00000100 "O
+b0000000000000100 "P
+b00000000000000000000000010100101 "D
+b00000100 "C
+bxxxxxxxxxxxxxxxx 3
+b0000000000000000 "N
+b1111 C
+b00000000000000000000000000000000 "#
+b00000000000000000000000000000000 5
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 4
+b00000000000000000000000000000000 "0
+b0000000000000000 "F
+b0000000000000000 z
+b0000000000000000 x
+b0000000000000000 y
+b00000000000000000000000000000000 B
+b00000000000000000000000011111001 ""
+b00 "8
+b01 "7
+b00000000 ":
+b00000100 "9
+b00 "B
+b01 "A
+b00 o
+b01 n
+bxxxxxxxxxxxxxx00 >
+b00000000000000000000000000001000 "-
+b00000000000000000000000000000111 ",
+0"q
+0"n
+0"e
+0"l
+0"f
+0"h
+0"g
+0"d
+1"m
+b00000000000000000000000010100101 "s
+b00000100 "r
+b01 "o
+b0000000000000000 "k
+b1111 "W
+b00000000000000000000000000000100 "p
+b00000000000000000000000010100101 "_
+b01 "\
+b00000100 "^
+b00 "]
+b1111 "V
+b0000000000000000 "i
+b0000000000000000 "c
+b0000000000000000 "a
+b0000000000000000 "b
+b0000000000000000 "j
+0.
+0"1
+0"S
+0$
+0/
+0"T
+x&
+x1
+x%
+x0
+x'
+x2
+0">
+0j
+0"Y
+0"?
+0k
+0"Z
+0"@
+0l
+0"[
+16
+1,
+x7
+x+
+08
+0-
+0f
+0"U
+1"`
+1m
+0#
+0"X
+$end
+#5
+1!
+1#
+1.
+1"1
+1"S
+#6
+0%
+00
+0&
+01
+0'
+02
+0:
+b0000000000000000 (
+b0000000000000000 3
+b00000000000000000000000000000000 )
+b00000000000000000000000000000000 4
+09
+0;
+0?
+07
+0+
+0@
+0=
+b0000000000000000 >
+0<
+b00000010101001010101001101010111 "0
+#10
+0!
+0#
+0.
+0"1
+0"S
+#15
+1!
+1#
+1.
+1"1
+1"S
+#20
+0!
+0#
+0.
+0"1
+0"S
+#25
+1!
+1#
+1.
+1"1
+1"S
+#30
+0!
+0#
+0.
+0"1
+0"S
+#35
+1!
+1#
+1.
+1"1
+1"S
+#40
+0!
+0#
+0.
+0"1
+0"S
+#45
+1!
+1#
+1.
+1"1
+1"S
+1"
+1$
+1/
+1"T
+1"2
+#46
+1%
+10
+1'
+12
+b0000000001011100 (
+b0000000001011100 3
+b10100101101001011100001111000011 )
+b10100101101001011100001111000011 4
+b0000000001011100 >
+b00000000000000000000000000000001 "0
+#50
+0!
+0#
+0.
+0"1
+0"S
+#55
+1!
+1#
+1.
+1"1
+1"S
+#56
+1&
+11
+19
+1:
+1?
+1\
+#60
+0!
+0#
+0.
+0"1
+0"S
+#65
+1!
+1#
+1.
+1"1
+1"S
+0A
+1^
+b00000000000000000000000011110001 ""
+b00000000000000000000000000000000 "0

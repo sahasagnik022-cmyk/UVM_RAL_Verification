@@ -1,0 +1,187 @@
+Command: /home/sagniksaha/uvm_ral_project/testbench/./simv -cm line+cond+fsm+tgl+branch+assert+group +UVM_TESTNAME=back_door_test -l simulation.log
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Nov  2 01:05 2026
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+Warning-[CM-ARGPL] Incorrect argument
+  'group' is not a valid argument to -cm. The -cm option requires a '+' 
+  separated list of flags.
+  The legal flags are: line cond fsm tgl obc path assert branch property_path 
+  
+
+
+Warning-[CM-UNKOPT] Unrecognized option
+  "group" is not a legal argument of the "-cm" option.
+  Refer to the user guide for more information about the "-cm" option.
+
+UVM_INFO @ 0: reporter [RNTST] Running test back_door_test...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+-------------------------------------------------------------------------
+Name                       Type                               Size  Value
+-------------------------------------------------------------------------
+uvm_test_top               back_door_test                     -     @461 
+  env                      apb_pkt_env                        -     @469 
+    agt                    apb_agent                          -     @477 
+      drv                  apb_driver                         -     @718 
+        rsp_port           uvm_analysis_port                  -     @735 
+        seq_item_port      uvm_seq_item_pull_port             -     @726 
+      mon                  apb_monitor                        -     @744 
+        ap                 uvm_analysis_port                  -     @752 
+      seqr                 apb_sequencer                      -     @761 
+        rsp_export         uvm_analysis_export                -     @769 
+        seq_item_export    uvm_seq_item_pull_imp              -     @875 
+        arbitration_queue  array                              0     -    
+        lock_queue         array                              0     -    
+        num_last_reqs      integral                           32    'd1  
+        num_last_rsps      integral                           32    'd1  
+    p_inst                 uvm_reg_predictor #(apb_seq_item)  -     @486 
+      bus_in               uvm_analysis_imp                   -     @498 
+      reg_ap               uvm_analysis_port                  -     @507 
+-------------------------------------------------------------------------
+
+                  45 |driver write data:a5a5c3c3
+55 |adapter gets data from dut:0
+65 |adapter gets data from dut:0
+65 |adapter gets data from dut:xxxxxxxx
+UVM_ERROR /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/reg/uvm_reg.svh(2871) @ 65: reporter [RegModel] No backdoor access available to peek register "regmodel.device_id"
+UVM_INFO apb_reg_seqs.sv(739) @ 65: uvm_test_top.env.agt.seqr@@seq [DEV_ID] rst val of dev_id = 0 (exp:0x2A55357)
+UVM_ERROR /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/reg/uvm_reg.svh(2871) @ 65: reporter [RegModel] No backdoor access available to peek register "regmodel.version"
+UVM_INFO apb_reg_seqs.sv(741) @ 65: uvm_test_top.env.agt.seqr@@seq [VERSION] rst val of version = 0 (exp:0x10200)
+UVM_ERROR: get: unable to locate hdl path dut.switch_status_r
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_ERROR: get: unable to locate hdl path dut.switch_status_r
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(743) @ 65: uvm_test_top.env.agt.seqr@@seq [SW_STAT] rst val of sw_stat = 0000000000000000 (exp:0xF1)
+UVM_ERROR: get: unable to locate hdl path dut.port_status_r
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(745) @ 65: uvm_test_top.env.agt.seqr@@seq [port_stat] rst val of port_stat = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.gen_status_r
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(747) @ 65: uvm_test_top.env.agt.seqr@@seq [gen_stat] rst val of gen_stat = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.stat_rx
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(749) @ 65: uvm_test_top.env.agt.seqr@@seq [stat_rx] rst val of stat_rx = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.stat_tx
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(751) @ 65: uvm_test_top.env.agt.seqr@@seq [stat_tx] rst val of stat_tx = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.stat_drop
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(753) @ 65: uvm_test_top.env.agt.seqr@@seq [stat_drop] rst val of stat_drop = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.switch_ctrl_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(755) @ 65: uvm_test_top.env.agt.seqr@@seq [switch_ctrl] rst val of switch_ctrl = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.port_enable_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(757) @ 65: uvm_test_top.env.agt.seqr@@seq [port_enb] rst val of port_en= 0 (exp:0xF)
+UVM_ERROR: get: unable to locate hdl path dut.fwd_enable_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(759) @ 65: uvm_test_top.env.agt.seqr@@seq [fwd_en] rst val of fwd_en = 0 (exp:0xF)
+UVM_ERROR: get: unable to locate hdl path dut.gen_ctrl_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(761) @ 65: uvm_test_top.env.agt.seqr@@seq [gen_ctrl] rst val of gen_ctrl = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.gen_pkt_cfg_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(763) @ 65: uvm_test_top.env.agt.seqr@@seq [gen_pkt_cfg] rst val of gen_pkt_cfg = 0 (exp:0x401)
+UVM_ERROR: get: unable to locate hdl path dut.gen_interval_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(765) @ 65: uvm_test_top.env.agt.seqr@@seq [gen_intrvl] rst val of gen_intrvl = 0 (exp:0x2)
+UVM_ERROR: get: unable to locate hdl path dut.gen_count_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(767) @ 65: uvm_test_top.env.agt.seqr@@seq [gen_cnt] rst val of gen_cnt = 0 (exp:0x4)
+UVM_ERROR: get: unable to locate hdl path dut.irq_status_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(769) @ 65: uvm_test_top.env.agt.seqr@@seq [irq_stat] rst val of irq_stat = 0 (exp:0x0)
+UVM_ERROR /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/reg/uvm_reg.svh(2871) @ 65: reporter [RegModel] No backdoor access available to peek register "regmodel.irq_enable"
+UVM_INFO apb_reg_seqs.sv(771) @ 65: uvm_test_top.env.agt.seqr@@seq [irq_en] rst val of irq_en = 0 (exp:0x0)
+UVM_ERROR /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/reg/uvm_reg.svh(2871) @ 65: reporter [RegModel] No backdoor access available to peek register "regmodel.irq_force"
+UVM_INFO apb_reg_seqs.sv(773) @ 65: uvm_test_top.env.agt.seqr@@seq [irq_force] rst val of irq_force = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.err_status_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(775) @ 65: uvm_test_top.env.agt.seqr@@seq [err_stat] rst val of err_stat = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.err_enable_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(777) @ 65: uvm_test_top.env.agt.seqr@@seq [err_enb] rst val of err_enb = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.ERR_INJECT
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(779) @ 65: uvm_test_top.env.agt.seqr@@seq [err_inj] rst val of err_inj = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.err_count_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(781) @ 65: uvm_test_top.env.agt.seqr@@seq [err_count] rst val of err_count = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.err_info_q
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(783) @ 65: uvm_test_top.env.agt.seqr@@seq [err_info] rst val of err_info = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.locked
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(785) @ 65: uvm_test_top.env.agt.seqr@@seq [lock] rst val of lock = 0 (exp:0x0)
+UVM_ERROR: get: unable to locate hdl path dut.SOFT_RESET
+ Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+UVM_INFO apb_reg_seqs.sv(787) @ 65: uvm_test_top.env.agt.seqr@@seq [soft_reset] rst val of soft_reset = 0 (exp:0x0)
+UVM_INFO /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_objection.svh(1274) @ 65: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   28
+UVM_WARNING :    0
+UVM_ERROR :    4
+UVM_FATAL :    0
+** Report counts by id
+[DEV_ID]     1
+[RNTST]     1
+[RegModel]     4
+[SW_STAT]     1
+[TEST_DONE]     1
+[UVMTOP]     1
+[VERSION]     1
+[err_count]     1
+[err_enb]     1
+[err_info]     1
+[err_inj]     1
+[err_stat]     1
+[fwd_en]     1
+[gen_cnt]     1
+[gen_ctrl]     1
+[gen_intrvl]     1
+[gen_pkt_cfg]     1
+[gen_stat]     1
+[irq_en]     1
+[irq_force]     1
+[irq_stat]     1
+[lock]     1
+[port_enb]     1
+[port_stat]     1
+[soft_reset]     1
+[stat_drop]     1
+[stat_rx]     1
+[stat_tx]     1
+[switch_ctrl]     1
+$finish called from file "/fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_root.svh", line 437.
+$finish at simulation time                   65
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 65
+CPU Time:      0.890 seconds;       Data structure size:   0.6Mb
+Mon Nov  2 01:05:15 2026
