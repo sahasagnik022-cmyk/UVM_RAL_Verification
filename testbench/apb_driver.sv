@@ -13,13 +13,10 @@ class apb_driver extends uvm_driver#(apb_seq_item);
     endfunction
 
     virtual task run_phase(uvm_phase phase);
-        wait(!vif.presetn);
-        vif.drv_cb.psel<=0;
-        vif.drv_cb.penable<=0;
-        vif.drv_cb.pwrite<=0;
-        vif.drv_cb.paddr<=0;
-        vif.drv_cb.pwdata<=0;
-        wait(vif.presetn==1);
+        if(vif.presetn!=0) begin
+            @(negedge vif.presetn);
+        end
+        @(posedge vif.presetn);
         forever begin
             seq_item_port.get_next_item(req);
             drive_item(req);
